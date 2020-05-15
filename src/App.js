@@ -32,7 +32,15 @@ const ImageToChange = styled.img`
   border-radius: ${({ radio }) => `${radio}%`};
   padding: ${({ spacing }) => `${spacing}px`};
   background-color:${ ({ color }) => `${color}`};
-  filter: ${({grayscale})=> `grayscale(${grayscale}%)`}; 
+  filter: ${({ grayscale }) => `grayscale(${grayscale}%)`}; 
+  @media (max-width: 425px) {
+    width: 50%;
+    height: auto;
+  }
+  @media (max-width: 320px) {
+    width: 40%;
+    height: auto;
+  }
  `
 
 const App = () => {
@@ -46,20 +54,20 @@ const App = () => {
   const handleChange = e => {
     setstyle({ ...style, [e.target.name]: e.target.value })
   }
-  
+
   return (
     <MainContainer>
       <h1>Update Style with <span>React</span></h1>
-       <InputContainer 
-       style={style}
-       handleChange={handleChange}/>
+      <InputContainer
+        style={style}
+        handleChange={handleChange} />
       <ContainerImg>
-      <ImageToChange 
-      src={arboles} 
-      radio={style.radio} 
-      spacing={style.spacing} 
-      grayscale={style.grayscale} 
-      color={style.color}/>
+        <ImageToChange
+          src={arboles}
+          radio={style.radio}
+          spacing={style.spacing}
+          grayscale={style.grayscale}
+          color={style.color} />
       </ContainerImg>
     </MainContainer>
   );

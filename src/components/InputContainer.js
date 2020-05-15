@@ -17,6 +17,9 @@ input {
   padding: 5px;
   margin: 0px;
 
+}
+@media (max-width: 768px) {
+    flex-direction: column;
 }`
 
 const InputContainer = ({ style, handleChange }) => {
