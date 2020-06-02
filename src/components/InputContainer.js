@@ -25,7 +25,7 @@ input {
 const InputContainer = ({ style, handleChange }) => {
   return (
     <Container>
-      <label>Radius:</label>
+      <label>Radius: {style.radio}%</label>
       <input type='range'
         name='radio'
         max='50'
@@ -34,7 +34,7 @@ const InputContainer = ({ style, handleChange }) => {
         value={style.radio}
         onChange={handleChange}></input>
 
-      <label> Spacing:</label>
+  <label>Spacing: {style.spacing}px</label>
       <input type='range'
         name='spacing'
         max='100'
@@ -44,7 +44,7 @@ const InputContainer = ({ style, handleChange }) => {
         onChange={handleChange}>
       </input>
 
-      <label> GrayScale:</label>
+  <label> GrayScale: {style.grayscale}%</label>
       <input type='range'
         name='grayscale'
         max='100'
@@ -54,7 +54,7 @@ const InputContainer = ({ style, handleChange }) => {
         onChange={handleChange}>
       </input>
 
-      <label> Color:</label>
+  <label> Color: {style.color}</label>
       <input type="color"
         name='color'
         value={style.color}

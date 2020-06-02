@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import arboles from './assets/arboles.jpg';
 import styled from 'styled-components'
 import InputContainer from './components/InputContainer'
-import './App.css';
 
 const MainContainer = styled.main`
 width: 100%;
